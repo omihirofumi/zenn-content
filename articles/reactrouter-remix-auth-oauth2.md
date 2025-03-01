@@ -32,7 +32,7 @@ React RouterにおけるSessionとCookieの管理は、[公式ドキュメント
 
 以下のように `authenticator` を設定します：
 
-```typescript
+```typescript:auth.server.ts
 import { Authenticator } from "remix-auth";
 import { OAuth2Strategy } from "remix-auth-oauth2";
 import { commitSession, getSession } from "./session.ts";
@@ -100,7 +100,7 @@ authenticator.use(
 
 v4 からは自分で `getSession` を呼び出してセッションの状態を確認する必要があります：
 
-```typescript
+```typescript:login.tsx
 export const action = async ({ request }: Route.ActionArgs) => {
   try {
     // 認証
@@ -135,7 +135,7 @@ export const loader = async ({ request }: Route.LoaderArgs) => {
 
 認証後のリダイレクト先は以下のように実装します。v4 では自分でセッションを保存する必要があります：
 
-```typescript
+```typescript:auth/callback.tsx
 import { authenticator, saveSession } from "@/.server/auth";
 import { redirect } from "react-router";
 import type { Route } from "./+types/callback.ts";
@@ -162,7 +162,7 @@ https://github.com/sergiodxa/remix-auth-oauth2/blob/0015b9efbd4a8d17fe35e9975615
 
 v4 では、ログアウト処理も自分で実装する必要があります。
 
-```typescript
+```typescript:logout.tsx
 import { destroySession, getSession } from "@/.server/session";
 import { Button } from "@/components/ui/button";
 import { Form, redirect } from "react-router";
