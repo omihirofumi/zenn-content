@@ -142,7 +142,7 @@ import type { Route } from "./+types/callback.ts";
 
 export async function loader({ request }: Route.LoaderArgs) {
   // 認証
-  // login.tsx でリダイレクトされた場合、ここで認証が行われます
+  // login.tsx でリダイレクトされた場合、ここでトークンの取得処理などが行われます。
   const user = await authenticator.authenticate("provider_name", request);
   // セッションを保存 - v4では自分で実装します
   const headers = await saveSession(request, user);
