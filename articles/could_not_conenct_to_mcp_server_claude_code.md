@@ -13,7 +13,20 @@ https://zenn.dev/kazuph/articles/5a6cc61ae21940
 こんな感じのエラーが出ました:
 ![Could not connect to MCP serverエラー](https://storage.googleapis.com/zenn-user-upload/be9ed2a66222-20250327.png)
 
+## 試したこと(だめだった)
 上記の記事内にも書いてあるのですが、`command`にフルパスで指定したら解決したそうです。調べてみると他にもこれで解決したって記事がいくつか出てきました。
+こんな感じ
+```json
+{
+  "mcpServers": {
+    "claude_code": {
+      "command": "/Users/kazuph/.local/share/mise/installs/node/20.18.2/bin/claude",
+      "args": ["mcp", "serve"],
+      "env": {}
+    }
+  }
+}
+```
 ただ、自分の場合はそれで解決しませんでした。
 
 ログを見ると、nodeが見つからないようでした。
