@@ -18,7 +18,7 @@ https://zenn.dev/kazuph/articles/5a6cc61ae21940
 
 ## 解決方法
 
-`env`に`PATH`を追加することで問題を解決できました。
+`env`に`PATH`を追加することで無事解決しました。
 
 ```json
 {
