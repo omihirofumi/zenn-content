@@ -13,7 +13,9 @@ https://zenn.dev/kazuph/articles/5a6cc61ae21940
 こんな感じのエラーが出ました:
 ![Could not connect to MCP serverエラー](https://storage.googleapis.com/zenn-user-upload/be9ed2a66222-20250327.png)
 
-ネットを調べると、`command`をフルパスで指定することで解決できるという情報がありましたが、自分の環境では問題が解消しませんでした。
+上記の記事内にも書いてあるのですが、`command`にフルパスで指定したら解決したそうです。調べてみると他にもこれで解決したって記事がいくつか出てきました。
+ただ、自分の場合はそれで解決しませんでした。
+
 ログを見ると、nodeが見つからないようでした。
 
 ## 解決方法
