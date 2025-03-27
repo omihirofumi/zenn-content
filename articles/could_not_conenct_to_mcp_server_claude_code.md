@@ -20,7 +20,7 @@ https://zenn.dev/kazuph/articles/5a6cc61ae21940
 {
   "mcpServers": {
     "claude_code": {
-      "command": "/Users/kazuph/.local/share/mise/installs/node/20.18.2/bin/claude",
+      "command": "/Users/hirofumiomi/.local/share/mise/installs/node/22.13.1/bin/claude",
       "args": ["mcp", "serve"],
       "env": {}
     }
