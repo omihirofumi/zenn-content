@@ -14,11 +14,11 @@ https://zenn.dev/kazuph/articles/5a6cc61ae21940
 ![Could not connect to MCP serverエラー](https://storage.googleapis.com/zenn-user-upload/be9ed2a66222-20250327.png)
 
 ネットを調べると、`command`をフルパスで指定することで解決できるという情報がありましたが、自分の環境では問題が解消しませんでした。
-ログを見ると、nodeが見つからないそうでした。
+ログを見ると、nodeが見つからないようでした。
 
 ## 解決方法
 
-最終的に、`env`に`PATH`を追加することで問題を解決できました。具体的には以下の設定を行いました：
+`env`に`PATH`を追加することで問題を解決できました。
 
 ```json
 {
